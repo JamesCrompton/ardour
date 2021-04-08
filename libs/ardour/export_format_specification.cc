@@ -620,6 +620,9 @@ ExportFormatSpecification::description (bool include_name)
 	if (_normalize) {
 		if (_normalize_loudness) {
 			components.push_back (_("normalize loudness"));
+			if  (_use_tp_limiter) {
+				components.push_back (_("limit peak"));
+			}
 		} else {
 			components.push_back (_("normalize peak"));
 		}
