@@ -144,6 +144,7 @@ void Limiter::process (ProcessContext<float> const& ctx)
 			} else {
 				ctx_out.remove_flag (ProcessContext<float>::EndOfInput);
 			}
+			this->output (ctx_out);
 			_latency -= ns;
 		}
   }
