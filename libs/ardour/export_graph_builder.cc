@@ -530,7 +530,6 @@ ExportGraphBuilder::SFC::set_peak_lufs (AudioGrapher::LoudnessReader const& lr)
 	if (!config.format->normalize_loudness ()) {
 		return;
 	}
-	bool use_limiter = true;
 	float lufs;
 	if (!config.format->use_tp_limiter ()) {
 		float peak = lr.calc_peak (config.format->normalize_lufs (), config.format->normalize_dbtp ());
